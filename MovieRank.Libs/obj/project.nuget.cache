@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "zOmiW2bcz8IYxthpynyosCoA4zIBwd9PK2M+1VT1abo3i/1l6IakxlRx8C9p6BjPQ36t/74NfJbLViCEbbO8lw==",
+  "success": true,
+  "projectFilePath": "/Users/victorescajeda/src/MovieRank/MovieRank.Libs/MovieRank.Libs.csproj",
+  "expectedPackageFiles": [
+    "/Users/victorescajeda/.nuget/packages/awssdk.core/3.7.106.20/awssdk.core.3.7.106.20.nupkg.sha512",
+    "/Users/victorescajeda/.nuget/packages/awssdk.dynamodbv2/3.7.102.27/awssdk.dynamodbv2.3.7.102.27.nupkg.sha512"
+  ],
+  "logs": []
+}
