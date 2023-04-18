@@ -1,4 +1,7 @@
 ﻿using Amazon.DynamoDBv2;
+using MovieRank.Libs.Mappers;
+using MovieRank.Libs.Repositories;
+using MovieRank.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +16,10 @@ builder.Services.AddDefaultAWSOptions(new Amazon.Extensions.NETCore.Setup.AWSOpt
 {
     Region = Amazon.RegionEndpoint.GetBySystemName("us-west-2")
 });
+
+builder.Services.AddSingleton<IMovieRankService, MovieRankService>();
+builder.Services.AddSingleton<IMovieRankRepository, MovieRankRepository>();
+builder.Services.AddSingleton<IMapper, Mapper>();
 
 var app = builder.Build();
 

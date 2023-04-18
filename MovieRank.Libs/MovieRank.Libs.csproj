@@ -9,12 +9,17 @@
   <ItemGroup>
     <None Remove="Repositories\" />
     <None Remove="Mappers\" />
+    <None Remove="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repositories\" />
     <Folder Include="Mappers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.102.27" />
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.102.28" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MovieRank.Contracts\MovieRank.Contracts.csproj" />
   </ItemGroup>
 </Project>
