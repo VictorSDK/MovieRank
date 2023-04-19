@@ -6,8 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using MovieRank.Contracts;
 using MovieRank.Services;
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace MovieRank.Controllers
 {
     [Route("movies")]
@@ -44,6 +42,33 @@ namespace MovieRank.Controllers
             var results = await _movieRankService.GetUsersRankedMoviesByMovieTitle(userId, movieName);
 
             return results;
+        }
+
+        [HttpPost]
+        [Route("{userId}")]
+        public async Task<IActionResult> AddMovie(int userId, [FromBody] MovieRankRequest movieRankRequest)
+        {
+            await _movieRankService.AddMovie(userId, movieRankRequest);
+
+            return Ok();
+        }
+
+        [HttpPatch]
+        [Route("{userId}")]
+        public async Task<IActionResult> UpdateMovie(int userId, [FromBody] MovieUpdateRequest request)
+        {
+            await _movieRankService.UpdateMovie(userId, request);
+
+            return Ok();
+        }
+
+        [HttpGet]
+        [Route("{movieName}/ranking")]
+        public async Task<MovieRankResponse> GetMoviesRanking(string movieName)
+        {
+            var result = await _movieRankService.GetMovieRank(movieName);
+
+            return result;
         }
     }
 }
