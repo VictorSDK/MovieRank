@@ -3,7 +3,7 @@ using MovieRank.Libs.Models;
 
 namespace MovieRank.Libs.Repositories
 {
-	public interface IMovieRankRepository
+	public interface IMovieRankOpmRepository
 	{
         Task<IEnumerable<MovieDb>> GetAllItems();
         Task<MovieDb> GetMovie(int userId, string movieName);

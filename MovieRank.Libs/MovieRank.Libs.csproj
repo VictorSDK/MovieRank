@@ -17,7 +17,7 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.102.28" />
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.102.33" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MovieRank.Contracts\MovieRank.Contracts.csproj" />

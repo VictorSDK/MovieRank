@@ -6,11 +6,11 @@ using MovieRank.Libs.Models;
 
 namespace MovieRank.Libs.Repositories
 {
-	public class MovieRankRepository : IMovieRankRepository
+	public class MovieRankOpmRepository : IMovieRankOpmRepository // Object Persistance Model
 	{
 		private readonly DynamoDBContext _context;
 
-		public MovieRankRepository(IAmazonDynamoDB dynamoDBClient)
+		public MovieRankOpmRepository(IAmazonDynamoDB dynamoDBClient)
 		{
 			_context = new DynamoDBContext(dynamoDBClient);
 		}

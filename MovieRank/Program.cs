@@ -1,4 +1,7 @@
-﻿using Amazon.DynamoDBv2;
+﻿// #define OPM
+#define DM
+// #define LL
+using Amazon.DynamoDBv2;
 using MovieRank.Libs.Mappers;
 using MovieRank.Libs.Repositories;
 using MovieRank.Services;
@@ -17,8 +20,13 @@ builder.Services.AddDefaultAWSOptions(new Amazon.Extensions.NETCore.Setup.AWSOpt
     Region = Amazon.RegionEndpoint.GetBySystemName("us-west-2")
 });
 
-builder.Services.AddSingleton<IMovieRankService, MovieRankService>();
-builder.Services.AddSingleton<IMovieRankRepository, MovieRankRepository>();
+#if OPM
+builder.Services.AddSingleton<IMovieRankService, MovieRankOpmService>();
+builder.Services.AddSingleton<IMovieRankOpmRepository, MovieRankOpmRepository>();
+#elif DM
+builder.Services.AddSingleton<IMovieRankService, MovieRankDmService>();
+builder.Services.AddSingleton<IMovieRankDmRepository, MovieRankDmRepository>();
+#endif
 builder.Services.AddSingleton<IMapper, Mapper>();
 
 var app = builder.Build();
