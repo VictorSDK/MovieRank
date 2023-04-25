@@ -6,7 +6,7 @@ using MovieRank.Libs.Repositories;
 namespace MovieRank.Services
 {
 	public class MovieRankOpmService : IMovieRankService
-	{
+    {
 		private readonly IMovieRankOpmRepository _movieRankRepository;
         private readonly IMapper _mapper;
 

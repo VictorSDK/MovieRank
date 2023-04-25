@@ -5,7 +5,7 @@ using MovieRank.Libs.Models;
 
 namespace MovieRank.Libs.Repositories
 {
-	public interface IMovieRankDmRepository
+	public interface IMovieRankDmRepository // Document Model
     {
         Task<IEnumerable<Document>> GetAllItems();
         Task<Document> GetMovie(int userId, string movieName);

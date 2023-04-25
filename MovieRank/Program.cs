@@ -1,6 +1,6 @@
 ﻿// #define OPM
-#define DM
-// #define LL
+// #define DM
+#define LL
 using Amazon.DynamoDBv2;
 using MovieRank.Libs.Mappers;
 using MovieRank.Libs.Repositories;
@@ -26,7 +26,12 @@ builder.Services.AddSingleton<IMovieRankOpmRepository, MovieRankOpmRepository>()
 #elif DM
 builder.Services.AddSingleton<IMovieRankService, MovieRankDmService>();
 builder.Services.AddSingleton<IMovieRankDmRepository, MovieRankDmRepository>();
+#else
+builder.Services.AddSingleton<IMovieRankService, MovieRankLlmService>();
+builder.Services.AddSingleton<IMovieRankLlmRepository, MovieRankLlmRepository>();
 #endif
+builder.Services.AddSingleton<ISetupService, SetupService>();
+builder.Services.AddSingleton<ISetupRepository, SetupRepository>();
 builder.Services.AddSingleton<IMapper, Mapper>();
 
 var app = builder.Build();

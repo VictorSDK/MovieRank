@@ -1,4 +1,5 @@
 ﻿using Amazon.DynamoDBv2.DocumentModel;
+using Amazon.DynamoDBv2.Model;
 using MovieRank.Contracts;
 using MovieRank.Libs.Models;
 
@@ -15,5 +16,10 @@ namespace MovieRank.Libs.Mappers
         MovieResponse ToMovieContract(Document item);
         Document ToDocumentModel(int userId, MovieRankRequest addRequest);
         Document ToDocumentModel(int userId, MovieResponse movieResponse, MovieUpdateRequest movieUpdateRequest);
+
+
+        IEnumerable<MovieResponse> ToMovieContract(ScanResponse response);
+        MovieResponse ToMovieContract(GetItemResponse response);
+        IEnumerable<MovieResponse> ToMovieContract(QueryResponse response);
     }
 }

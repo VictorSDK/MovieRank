@@ -5,13 +5,13 @@ using MovieRank.Libs.Repositories;
 
 namespace MovieRank.Services
 {
-	public class MovieRankDmService : IMovieRankService
+	public class MovieRankLlmService : IMovieRankService
     {
-		private readonly IMovieRankDmRepository _movieRankRepository;
+		private readonly IMovieRankLlmRepository _movieRankRepository;
         private readonly IMapper _mapper;
 
-        public MovieRankDmService(
-            IMovieRankDmRepository movieRankRepository,
+        public MovieRankLlmService(
+            IMovieRankLlmRepository movieRankRepository,
             IMapper mapper)
         {
             _movieRankRepository = movieRankRepository;
@@ -40,25 +40,19 @@ namespace MovieRank.Services
 
         public async Task AddMovie(int userId, MovieRankRequest movieRankRequest)
         {
-            var document = _mapper.ToDocumentModel(userId, movieRankRequest);
-
-            await _movieRankRepository.AddMovie(document);
+            await _movieRankRepository.AddMovie(userId, movieRankRequest);
         }
 
         public async Task UpdateMovie(int userId, MovieUpdateRequest request)
         {
-            var response = await GetMovie(userId, request.MovieName);
-
-            var movieDb = _mapper.ToDocumentModel(userId, response, request);
-
-            await _movieRankRepository.UpdateMovie(movieDb);
+            await _movieRankRepository.UpdateMovie(userId, request);
         }
 
         public async Task<MovieRankResponse> GetMovieRank(string movieName)
         {
             var response = await _movieRankRepository.GetMovieRank(movieName);
 
-            var overallMovieRanking = Math.Round(response.Select(x => x["Ranking"].AsInt()).Average());
+            var overallMovieRanking = Math.Round(response.Items.Select(item => Convert.ToInt32(item["Ranking"].N)).Average());
 
             return new MovieRankResponse
             {
