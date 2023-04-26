@@ -1,0 +1,292 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/victorescajeda/src/MovieRank/MovieRank.Integration.Tests/MovieRank.Integration.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/victorescajeda/src/MovieRank/MovieRank.Contracts/MovieRank.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/victorescajeda/src/MovieRank/MovieRank.Contracts/MovieRank.Contracts.csproj",
+        "projectName": "MovieRank.Contracts",
+        "projectPath": "/Users/victorescajeda/src/MovieRank/MovieRank.Contracts/MovieRank.Contracts.csproj",
+        "packagesPath": "/Users/victorescajeda/.nuget/packages/",
+        "outputPath": "/Users/victorescajeda/src/MovieRank/MovieRank.Contracts/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/victorescajeda/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/victorescajeda/src/MovieRank/MovieRank.Integration.Tests/MovieRank.Integration.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/victorescajeda/src/MovieRank/MovieRank.Integration.Tests/MovieRank.Integration.Tests.csproj",
+        "projectName": "MovieRank.Integration.Tests",
+        "projectPath": "/Users/victorescajeda/src/MovieRank/MovieRank.Integration.Tests/MovieRank.Integration.Tests.csproj",
+        "packagesPath": "/Users/victorescajeda/.nuget/packages/",
+        "outputPath": "/Users/victorescajeda/src/MovieRank/MovieRank.Integration.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/victorescajeda/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/victorescajeda/src/MovieRank/MovieRank/MovieRank.csproj": {
+                "projectPath": "/Users/victorescajeda/src/MovieRank/MovieRank/MovieRank.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AWSSDK.DynamoDBv2": {
+              "target": "Package",
+              "version": "[3.7.102.33, )"
+            },
+            "Docker.DotNet": {
+              "target": "Package",
+              "version": "[3.125.14, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.5.0, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/victorescajeda/src/MovieRank/MovieRank.Libs/MovieRank.Libs.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/victorescajeda/src/MovieRank/MovieRank.Libs/MovieRank.Libs.csproj",
+        "projectName": "MovieRank.Libs",
+        "projectPath": "/Users/victorescajeda/src/MovieRank/MovieRank.Libs/MovieRank.Libs.csproj",
+        "packagesPath": "/Users/victorescajeda/.nuget/packages/",
+        "outputPath": "/Users/victorescajeda/src/MovieRank/MovieRank.Libs/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/victorescajeda/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/victorescajeda/src/MovieRank/MovieRank.Contracts/MovieRank.Contracts.csproj": {
+                "projectPath": "/Users/victorescajeda/src/MovieRank/MovieRank.Contracts/MovieRank.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AWSSDK.DynamoDBv2": {
+              "target": "Package",
+              "version": "[3.7.102.33, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/victorescajeda/src/MovieRank/MovieRank/MovieRank.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/victorescajeda/src/MovieRank/MovieRank/MovieRank.csproj",
+        "projectName": "MovieRank",
+        "projectPath": "/Users/victorescajeda/src/MovieRank/MovieRank/MovieRank.csproj",
+        "packagesPath": "/Users/victorescajeda/.nuget/packages/",
+        "outputPath": "/Users/victorescajeda/src/MovieRank/MovieRank/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/victorescajeda/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/victorescajeda/src/MovieRank/MovieRank.Contracts/MovieRank.Contracts.csproj": {
+                "projectPath": "/Users/victorescajeda/src/MovieRank/MovieRank.Contracts/MovieRank.Contracts.csproj"
+              },
+              "/Users/victorescajeda/src/MovieRank/MovieRank.Libs/MovieRank.Libs.csproj": {
+                "projectPath": "/Users/victorescajeda/src/MovieRank/MovieRank.Libs/MovieRank.Libs.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AWSSDK.DynamoDBv2": {
+              "target": "Package",
+              "version": "[3.7.102.33, )"
+            },
+            "AWSSDK.Extensions.NETCore.Setup": {
+              "target": "Package",
+              "version": "[3.7.5, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
